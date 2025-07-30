@@ -1,6 +1,33 @@
-# Calculadora_Partidas
-Para entenderem o codigo por trás do arquivo 
+# 🧮 Calculadora de Ranqueadas
 
+Este projeto é uma simples **calculadora de partidas ranqueadas** feita em JavaScript. O objetivo é determinar o nível de um herói com base na diferença entre vitórias e derrotas.
+
+---
+
+## 📌 Lógica do Projeto
+
+A função `resultadoRanqueada()` recebe dois parâmetros:
+
+- **Vitórias**
+- **Derrotas**
+
+Com base nisso, calcula o **saldo de vitórias** e classifica o jogador em um dos seguintes níveis:
+
+| Saldo de Vitórias | Nível      |
+|-------------------|------------|
+| 0 a 10            | 🪨 Ferro     |
+| 11 a 20           | 🥉 Bronze    |
+| 21 a 50           | 🥈 Prata     |
+| 51 a 80           | 🥇 Ouro      |
+| 81 a 90           | 💎 Diamante  |
+| 91 a 100          | 🔥 Lendário  |
+| Acima de 100      | 🧠 Imortal   |
+
+---
+
+## 🧠 Exemplo de Código
+
+```javascript
 function resultadoRanqueada(quantidadeVitorias, quantidadeDerrotas) {
     let saldoVitorias = quantidadeVitorias - quantidadeDerrotas;
     let nivel;
@@ -24,9 +51,3 @@ function resultadoRanqueada(quantidadeVitorias, quantidadeDerrotas) {
     console.log(`O herói ganhou ${saldoVitorias} e está no nível de ${nivel}`);
 }
 
-// Coletar dados com prompt
-let quantidadeVitorias = parseInt(prompt('Quantas vitórias: '));
-let quantidadeDerrotas = parseInt(prompt('Quantas derrotas: '));
-
-// Chamar a função com os dois valores
-resultadoRanqueada(quantidadeVitorias, quantidadeDerrotas);
